@@ -3,78 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Training & Services | Home</title>
+    <title>KH-Aesthetics | Modern Cosmetic Excellence</title>
     <style>
         :root {
-            --primary: #0d9488; /* Clinical Teal */
-            --primary-dark: #0f766e;
-            --text-main: #1f2937;
-            --text-muted: #4b5563;
-            --bg-light: #f9fafb;
+            --primary-dark: #111827; /* Deep Luxury Charcoal */
+            --accent-gold: #c5a880;  /* Soft Premium Gold/Champagne */
+            --text-main: #374151;
+            --text-light: #6b7280;
+            --bg-cream: #faf9f6;     /* Soft Premium Off-White */
             --white: #ffffff;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { color: var(--text-main); background-color: var(--white); line-height: 1.6; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Didot", "Playfair Display", -apple-system, BlinkMacSystemFont, sans-serif; }
+        body { color: var(--text-main); background-color: var(--bg-cream); line-height: 1.6; }
         
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--white); border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
-        .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-        .cta-btn { background: var(--primary); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 6px; transition: background 0.2s; }
-        .cta-btn:hover { background: var(--primary-dark); }
+        /* Premium Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; background: var(--white); border-bottom: 1px solid #f0ede6; position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: 300; font-size: 1.5rem; letter-spacing: 3px; color: var(--primary-dark); text-transform: uppercase; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-weight: 400; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-gold); }
+        .cta-btn { background: var(--primary-dark); color: var(--white) !important; padding: 0.75rem 1.5rem; letter-spacing: 2px; font-size: 0.8rem; border-radius: 0px; transition: all 0.3s; border: 1px solid var(--primary-dark); }
+        .cta-btn:hover { background: transparent; color: var(--primary-dark) !important; }
 
-        /* Hero Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 5rem 5%; background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); gap: 2rem; }
-        .hero-content { flex: 1; max-width: 600px; }
-        .hero-content h1 { font-size: 2.75rem; line-height: 1.2; color: #111827; margin-bottom: 1.5rem; }
-        .hero-content p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2rem; }
+        /* Luxury Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 6rem 5%; background: var(--white); gap: 4rem; }
+        .hero-content { flex: 1; max-width: 550px; }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 300; line-height: 1.15; color: var(--primary-dark); margin-bottom: 1.5rem; letter-spacing: -1px; }
+        .hero-content p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2.5rem; font-family: -apple-system, sans-serif; }
         .hero-image-frame { flex: 1; display: flex; justify-content: center; }
-        .clinical-graphic { width: 100%; max-width: 450px; height: 320px; background: var(--white); border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--primary); padding: 2rem; text-align: center; }
-
-        /* Features/About Section */
-        .section { padding: 5rem 5%; }
-        .section-title { text-align: center; font-size: 2rem; margin-bottom: 3rem; color: #111827; }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .about-text h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); }
-        .about-text p { margin-bottom: 1.5rem; color: var(--text-muted); }
         
-        .badge-container { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
-        .badge { background: #e0f2fe; color: #0369a1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; }
+        /* Modern Abstract Graphic Frame instead of raw images */
+        .aesthetics-graphic { width: 100%; max-width: 400px; height: 500px; background: linear-gradient(180deg, #f3efe6 0%, #e2dacb 100%); border-radius: 200px 200px 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--primary-dark); padding: 2rem; text-align: center; box-shadow: inset 0 0 40px rgba(0,0,0,0.02); }
 
-        /* Responsiveness */
+        /* Philosophy Section */
+        .section { padding: 7rem 5%; background: var(--bg-cream); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-text h2 { font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem; color: var(--primary-dark); letter-spacing: -0.5px; }
+        .about-text p { margin-bottom: 1.5rem; color: var(--text-light); font-family: -apple-system, sans-serif; font-size: 1.05rem; }
+        
+        .gold-divider { width: 60px; height: 1px; background-color: var(--accent-gold); margin-bottom: 2rem; }
+
         @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 1rem; text-align: center; }
-            .hero { flex-direction: column; text-align: center; padding: 3rem 5%; }
-            .hero-content h1 { font-size: 2rem; }
-            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            nav { flex-direction: column; gap: 1.5rem; padding: 1.5rem 5%; }
+            .nav-links { flex-direction: column; gap: 1rem; }
+            .hero { flex-direction: column-reverse; text-align: center; padding: 4rem 5%; gap: 2rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .gold-divider { margin: 0 auto 2rem auto; }
+            .aesthetics-graphic { height: 350px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">✦ Clinical Excellence</div>
+        <div class="logo">KH Aesthetics</div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="services.html">Services & Booking</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="services.html" class="cta-btn">Book Now</a></li>
+            <li><a href="services.html">Treatments</a></li>
+            <li><a href="contact.html">Inquire</a></li>
+            <li><a href="services.html" class="cta-btn">Book Appointment</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Evidence-Based Clinical Training & Professional Consultation</h1>
-            <p>Empowering healthcare professionals, corporate environments, and specialized teams with expert operational training, dynamic compliance validation, and certified clinical competencies.</p>
-            <a href="services.html" class="cta-btn" style="font-size: 1.1rem; padding: 0.8rem 1.8rem;">View Products & Book</a>
+            <h1>Artistry Meets Medical Precision</h1>
+            <div class="gold-divider"></div>
+            <p>Specializing in bespoke, medical-grade facial rejuvenation and non-surgical aesthetic enhancements. We craft tailored treatment matrices designed to elevate your natural features with subtle, undetectable precision.</p>
+            <a href="services.html" class="cta-btn">Explore Treatments</a>
         </div>
         <div class="hero-image-frame">
-            <div class="clinical-graphic">
-                <span style="font-size: 4rem; margin-bottom: 1rem;">🫁</span>
-                <h3>Accredited Learning</h3>
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Fully compliant professional development structures designed for operational environments.</p>
+            <div class="aesthetics-graphic">
+                <span style="font-size: 3rem; font-weight: 300; letter-spacing: 4px; color: #ad9472;">KH</span>
+                <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-light); margin-top: 1rem;">Skin Clinic & Rejuvenation</p>
             </div>
         </div>
     </section>
@@ -82,22 +84,17 @@
     <section class="section">
         <div class="about-grid">
             <div>
-                <div class="clinical-graphic" style="height: 350px; background: var(--bg-light);">
-                    <span style="font-size: 4rem; margin-bottom: 1rem;">🩺</span>
-                    <h3>Operational Expertise</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Over 15 years of boots-on-the-ground capability driving every curriculum blueprint.</p>
+                <div class="aesthetics-graphic" style="height: 400px; border-radius: 0px; background: #ffffff; border: 1px solid #eeebe3;">
+                    <span style="font-size: 2.5rem; color: var(--accent-gold);">✧</span>
+                    <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-dark); margin-top: 1rem; font-weight: bold;">The Standard of Care</p>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem; font-family: -apple-system, sans-serif; max-width: 280px;">Every treatment protocol is clinically backed, fully licensed, and entirely bespoke.</p>
                 </div>
             </div>
             <div class="about-text">
-                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #111827;">About Our Practice</h2>
-                <h3>High-Impact, Specialized Delivery</h3>
-                <p>We deliver elite professional training engineered for modern healthcare, community frameworks, and complex operational settings. Our programs bridge the gap between regulatory theory and real-world compliance execution.</p>
-                <p>Every session is led by seasoned, fully accredited clinical training specialists focused on building absolute muscle memory, legal confidence, and practical competency in high-pressure scenarios.</p>
-                <div class="badge-container">
-                    <span class="badge">✓ Certified Instructors</span>
-                    <span class="badge">✓ Quality Assured</span>
-                    <span class="badge">✓ Interactive Frameworks</span>
-                </div>
+                <h2>Our Clinical Philosophy</h2>
+                <div class="gold-divider"></div>
+                <p>We believe that high-end aesthetics should never look overdone. Our practice is built entirely on the foundation of subtle balance, facial symmetry, and skin health optimization.</p>
+                <p>Utilizing premium, industry-leading products and highly advanced anatomical placement techniques, we deliver predictable, safe, and beautifully refined outcomes in a completely private clinical environment.</p>
             </div>
         </div>
     </section>
