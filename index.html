@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Training & Services | Home</title>
+    <style>
+        :root {
+            --primary: #0d9488; /* Clinical Teal */
+            --primary-dark: #0f766e;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { color: var(--text-main); background-color: var(--white); line-height: 1.6; }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--white); border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .cta-btn { background: var(--primary); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 6px; transition: background 0.2s; }
+        .cta-btn:hover { background: var(--primary-dark); }
+
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 5rem 5%; background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); gap: 2rem; }
+        .hero-content { flex: 1; max-width: 600px; }
+        .hero-content h1 { font-size: 2.75rem; line-height: 1.2; color: #111827; margin-bottom: 1.5rem; }
+        .hero-content p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2rem; }
+        .hero-image-frame { flex: 1; display: flex; justify-content: center; }
+        .clinical-graphic { width: 100%; max-width: 450px; height: 320px; background: var(--white); border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--primary); padding: 2rem; text-align: center; }
+
+        /* Features/About Section */
+        .section { padding: 5rem 5%; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 3rem; color: #111827; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); }
+        .about-text p { margin-bottom: 1.5rem; color: var(--text-muted); }
+        
+        .badge-container { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .badge { background: #e0f2fe; color: #0369a1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 1rem; text-align: center; }
+            .hero { flex-direction: column; text-align: center; padding: 3rem 5%; }
+            .hero-content h1 { font-size: 2rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">✦ Clinical Excellence</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services & Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html" class="cta-btn">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Evidence-Based Clinical Training & Professional Consultation</h1>
+            <p>Empowering healthcare professionals, corporate environments, and specialized teams with expert operational training, dynamic compliance validation, and certified clinical competencies.</p>
+            <a href="services.html" class="cta-btn" style="font-size: 1.1rem; padding: 0.8rem 1.8rem;">View Products & Book</a>
+        </div>
+        <div class="hero-image-frame">
+            <div class="clinical-graphic">
+                <span style="font-size: 4rem; margin-bottom: 1rem;">🫁</span>
+                <h3>Accredited Learning</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Fully compliant professional development structures designed for operational environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="about-grid">
+            <div>
+                <div class="clinical-graphic" style="height: 350px; background: var(--bg-light);">
+                    <span style="font-size: 4rem; margin-bottom: 1rem;">🩺</span>
+                    <h3>Operational Expertise</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Over 15 years of boots-on-the-ground capability driving every curriculum blueprint.</p>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #111827;">About Our Practice</h2>
+                <h3>High-Impact, Specialized Delivery</h3>
+                <p>We deliver elite professional training engineered for modern healthcare, community frameworks, and complex operational settings. Our programs bridge the gap between regulatory theory and real-world compliance execution.</p>
+                <p>Every session is led by seasoned, fully accredited clinical training specialists focused on building absolute muscle memory, legal confidence, and practical competency in high-pressure scenarios.</p>
+                <div class="badge-container">
+                    <span class="badge">✓ Certified Instructors</span>
+                    <span class="badge">✓ Quality Assured</span>
+                    <span class="badge">✓ Interactive Frameworks</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
