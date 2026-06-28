@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Bookings</title>
+    <style>
+        :root {
+            --primary: #0d9488;
+            --primary-dark: #0f766e;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { color: var(--text-main); background-color: var(--white); line-height: 1.6; }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--white); border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .cta-btn { background: var(--primary); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 6px; }
+
+        .container { padding: 4rem 5%; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem auto; }
+        .section-header h1 { font-size: 2.25rem; color: #111827; margin-bottom: 1rem; }
+        
+        /* Products Grid */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 5rem; }
+        .product-card { background: var(--white); border: 1px solid #e5e7eb; border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -5px rgba(0,0,0,0.05); }
+        .icon-box { font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
+        .product-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #111827; }
+        .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+        .product-price { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; border-top: 1px dashed #e5e7eb; padding-top: 1rem; }
+        .book-link { text-align: center; background: var(--bg-light); color: var(--primary); text-decoration: none; padding: 0.6rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; border: 1px solid #e5e7eb; }
+        .book-link:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+        /* Booking Container */
+        .booking-section { background: var(--bg-light); padding: 4rem 5%; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; }
+        .booking-frame-placeholder { background: var(--white); border: 1px dashed #cbd5e1; border-radius: 8px; height: 600px; display: flex; justify-content: center; align-items: center; margin-top: 2rem; }
+        
+        /* Real embed code goes here when available */
+        .live-booking-iframe { width: 100%; height: 650px; border: 0; margin-top: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 1rem; }
+            .container { padding: 2rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">✦ Clinical Excellence</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Services & Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html" class="cta-btn">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section-header">
+            <h1>Our Programs & Services</h1>
+            <p>Select an accredited syllabus below. Instant automated confirmation, invoicing, and digital training materials are dispatched upon a completed secure checkout layout.</p>
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="icon-box">❤️</div>
+                <div class="product-title">Advanced Life Support (ALS)</div>
+                <div class="product-desc">Advanced clinical algorithms, mechanical airway interventions, and dynamic high-fidelity cardiac arrest management validation.</div>
+                <div class="product-price">£245<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / candidate</span></div>
+                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="icon-box">🧠</div>
+                <div class="product-title">Positive Behaviour Support (PBS)</div>
+                <div class="product-desc">Ethical de-escalation strategies, functional human behavior mapping, and safe restrictive intervention frameworks.</div>
+                <div class="product-price">£180<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / candidate</span></div>
+                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="icon-box">🩹</div>
+                <div class="product-title">Trauma & Hemorrhage Control</div>
+                <div class="product-desc">Critical point-of-injury care addressing catastrophic blast wounds, packing protocols, and rapid tourniquet applications.</div>
+                <div class="product-price">£150<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / candidate</span></div>
+                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="icon-box">🏢</div>
+                <div class="product-title">Corporate Clinical Compliance</div>
+                <div class="product-desc">On-site regulatory risk audits and specialized staff standard operations review tailored directly to corporate policy structures.</div>
+                <div class="product-price">£550<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / session</span></div>
+                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+            </div>
+        </div>
+
+        <!-- Interactive Booking Engine Target Area -->
+        <div class="booking-section" id="scheduler">
+            <h2>Select Date & Secure Session</h2>
+            <p style="color: var(--text-muted);">Pick your course module below to launch secure payment validation and lock in calendar allocation instantly.</p>
+            
+            <!-- COUPLING NOTE: Paste your Calendly or Cal.com embed snippet right here -->
+            <div class="booking-frame-placeholder">
+                <p style="color: var(--text-muted); padding: 1rem;">
+                    <strong>[Interactive Booking Portal Engine Area]</strong><br>
+                    Your automated scheduling portal (Calendly / Cal.com iframe script tag) will load natively inside this block container.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
