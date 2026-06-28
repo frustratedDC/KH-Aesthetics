@@ -3,120 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products & Bookings</title>
+    <title>KH-Aesthetics | Treatments & Bookings</title>
     <style>
         :root {
-            --primary: #0d9488;
-            --primary-dark: #0f766e;
-            --text-main: #1f2937;
-            --text-muted: #4b5563;
-            --bg-light: #f9fafb;
+            --primary-dark: #111827; 
+            --accent-gold: #c5a880;  
+            --text-main: #374151;
+            --text-light: #6b7280;
+            --bg-cream: #faf9f6;     
             --white: #ffffff;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Didot", "Playfair Display", -apple-system, BlinkMacSystemFont, sans-serif; }
         body { color: var(--text-main); background-color: var(--white); line-height: 1.6; }
         
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--white); border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
-        .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-        .cta-btn { background: var(--primary); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 6px; }
+        /* Premium Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; background: var(--white); border-bottom: 1px solid #f0ede6; position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: 300; font-size: 1.5rem; letter-spacing: 3px; color: var(--primary-dark); text-transform: uppercase; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-weight: 400; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-gold); }
+        .cta-btn { background: var(--primary-dark); color: var(--white) !important; padding: 0.75rem 1.5rem; letter-spacing: 2px; font-size: 0.8rem; border-radius: 0px; text-transform: uppercase; }
 
-        .container { padding: 4rem 5%; }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem auto; }
-        .section-header h1 { font-size: 2.25rem; color: #111827; margin-bottom: 1rem; }
+        .container { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 4rem auto; }
+        .section-header h1 { font-size: 2.5rem; font-weight: 300; color: var(--primary-dark); margin-bottom: 1rem; }
+        .section-header p { font-family: -apple-system, sans-serif; color: var(--text-light); font-size: 1.05rem; }
+        .gold-divider { width: 60px; height: 1px; background-color: var(--accent-gold); margin: 1.5rem auto; }
         
-        /* Products Grid */
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 5rem; }
-        .product-card { background: var(--white); border: 1px solid #e5e7eb; border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
-        .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -5px rgba(0,0,0,0.05); }
-        .icon-box { font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
-        .product-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #111827; }
-        .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
-        .product-price { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; border-top: 1px dashed #e5e7eb; padding-top: 1rem; }
-        .book-link { text-align: center; background: var(--bg-light); color: var(--primary); text-decoration: none; padding: 0.6rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; border: 1px solid #e5e7eb; }
-        .book-link:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+        /* Premium Treatment Cards */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; margin-bottom: 6rem; }
+        .product-card { background: var(--bg-cream); border: 1px solid #eeebe3; border-radius: 0px; padding: 2.5rem 2rem; display: flex; flex-direction: column; transition: all 0.3s; text-align: center; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.03); border-color: var(--accent-gold); }
+        .icon-box { font-size: 1.75rem; margin-bottom: 1rem; color: var(--accent-gold); }
+        .product-title { font-size: 1.3rem; font-weight: 400; margin-bottom: 0.75rem; color: var(--primary-dark); letter-spacing: 0.5px; }
+        .product-desc { color: var(--text-light); font-size: 0.9rem; font-family: -apple-system, sans-serif; margin-bottom: 2rem; flex-grow: 1; line-height: 1.5; }
+        .product-price { font-size: 1.4rem; font-weight: 300; color: var(--primary-dark); margin-bottom: 1.5rem; border-top: 1px solid #eeebe3; padding-top: 1.5rem; letter-spacing: 1px; }
+        .book-link { display: block; text-align: center; background: transparent; color: var(--primary-dark); text-decoration: none; padding: 0.75rem; font-size: 0.8rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--primary-dark); }
+        .book-link:hover { background: var(--primary-dark); color: var(--white); }
 
-        /* Booking Container */
-        .booking-section { background: var(--bg-light); padding: 4rem 5%; border-radius: 12px; border: 1px solid #e5e7eb; text-align: center; }
-        .booking-frame-placeholder { background: var(--white); border: 1px dashed #cbd5e1; border-radius: 8px; height: 600px; display: flex; justify-content: center; align-items: center; margin-top: 2rem; }
+        /* Embedded Booking System Container */
+        .booking-section { background: var(--bg-cream); padding: 5rem 5%; border: 1px solid #eeebe3; text-align: center; }
+        .booking-section h2 { font-size: 2rem; font-weight: 300; color: var(--primary-dark); }
+        .booking-frame-placeholder { background: var(--white); border: 1px solid #eeebe3; border-radius: 0px; height: 650px; display: flex; justify-content: center; align-items: center; margin-top: 2.5rem; }
         
-        /* Real embed code goes here when available */
-        .live-booking-iframe { width: 100%; height: 650px; border: 0; margin-top: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 1rem; }
-            .container { padding: 2rem 5%; }
+            .container { padding: 3rem 5%; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">✦ Clinical Excellence</div>
+        <div class="logo">KH Aesthetics</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html" class="active">Services & Booking</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="services.html" class="cta-btn">Book Now</a></li>
+            <li><a href="services.html" class="active">Treatments</a></li>
+            <li><a href="contact.html">Inquire</a></li>
+            <li><a href="services.html" class="cta-btn">Book Appointment</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <div class="section-header">
-            <h1>Our Programs & Services</h1>
-            <p>Select an accredited syllabus below. Instant automated confirmation, invoicing, and digital training materials are dispatched upon a completed secure checkout layout.</p>
+            <h1>Clinical Signature Treatments</h1>
+            <div class="gold-divider"></div>
+            <p>Every procedure is personalized to your unique anatomical geometry. Select your treatment configuration below to view available calendar allocations and secure your session.</p>
         </div>
 
         <div class="products-grid">
-            <!-- Product 1 -->
+            <!-- Treatment 1 -->
             <div class="product-card">
-                <div class="icon-box">❤️</div>
-                <div class="product-title">Advanced Life Support (ALS)</div>
-                <div class="product-desc">Advanced clinical algorithms, mechanical airway interventions, and dynamic high-fidelity cardiac arrest management validation.</div>
-                <div class="product-price">£245<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / candidate</span></div>
-                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+                <div class="icon-box">✧</div>
+                <div class="product-title">Dermal Contouring</div>
+                <div class="product-desc">Premium structural enhancement tailored for jawline architecture, cheek volume restoration, and subtle chin elongation profiles.</div>
+                <div class="product-price">From £220</div>
+                <a href="#scheduler" class="book-link">Select Appointment</a>
             </div>
 
-            <!-- Product 2 -->
+            <!-- Treatment 2 -->
             <div class="product-card">
-                <div class="icon-box">🧠</div>
-                <div class="product-title">Positive Behaviour Support (PBS)</div>
-                <div class="product-desc">Ethical de-escalation strategies, functional human behavior mapping, and safe restrictive intervention frameworks.</div>
-                <div class="product-price">£180<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / candidate</span></div>
-                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+                <div class="icon-box">✧</div>
+                <div class="product-title">Anti-Wrinkle Therapy</div>
+                <div class="product-desc">Targeted, medical-grade prescription micro-injections to gently soften dynamic expression lines while preserving natural mobility.</div>
+                <div class="product-price">From £180</div>
+                <a href="#scheduler" class="book-link">Select Appointment</a>
             </div>
 
-            <!-- Product 3 -->
+            <!-- Treatment 3 -->
             <div class="product-card">
-                <div class="icon-box">🩹</div>
-                <div class="product-title">Trauma & Hemorrhage Control</div>
-                <div class="product-desc">Critical point-of-injury care addressing catastrophic blast wounds, packing protocols, and rapid tourniquet applications.</div>
-                <div class="product-price">£150<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / candidate</span></div>
-                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+                <div class="icon-box">✧</div>
+                <div class="product-title">Lip Sculpt & Define</div>
+                <div class="product-desc">Advanced precision placement focusing on vermilion border crispness, hydration restoration, and symmetrical volume balancing.</div>
+                <div class="product-price">From £195</div>
+                <a href="#scheduler" class="book-link">Select Appointment</a>
             </div>
 
-            <!-- Product 4 -->
+            <!-- Treatment 4 -->
             <div class="product-card">
-                <div class="icon-box">🏢</div>
-                <div class="product-title">Corporate Clinical Compliance</div>
-                <div class="product-desc">On-site regulatory risk audits and specialized staff standard operations review tailored directly to corporate policy structures.</div>
-                <div class="product-price">£550<span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);"> / session</span></div>
-                <a href="#scheduler" class="book-link">Reserve & Pay</a>
+                <div class="icon-box">✧</div>
+                <div class="product-title">Skin Remodelling (Profhilo)</div>
+                <div class="product-desc">Ultra-pure hyaluronic acid micro-droplet hydration delivery designed to trigger deep tissue collagen synthesis and overall luminosity.</div>
+                <div class="product-price">From £250</div>
+                <a href="#scheduler" class="book-link">Select Appointment</a>
             </div>
         </div>
 
-        <!-- Interactive Booking Engine Target Area -->
+        <!-- Interactive Scheduler Embed Point -->
         <div class="booking-section" id="scheduler">
-            <h2>Select Date & Secure Session</h2>
-            <p style="color: var(--text-muted);">Pick your course module below to launch secure payment validation and lock in calendar allocation instantly.</p>
+            <h2>Select Date & Secure Slot</h2>
+            <div class="gold-divider"></div>
+            <p style="color: var(--text-light); font-family: -apple-system, sans-serif;">Select your desired service panel within our digital concierge module to secure appointment configuration.</p>
             
-            <!-- COUPLING NOTE: Paste your Calendly or Cal.com embed snippet right here -->
             <div class="booking-frame-placeholder">
-                <p style="color: var(--text-muted); padding: 1rem;">
-                    <strong>[Interactive Booking Portal Engine Area]</strong><br>
-                    Your automated scheduling portal (Calendly / Cal.com iframe script tag) will load natively inside this block container.
+                <p style="color: var(--text-light); font-family: -apple-system, sans-serif; font-size: 0.9rem; letter-spacing: 1px;">
+                    <strong>[YOUR BOOKING ENGINE WIDGET INTERFACE HERE]</strong><br><br>
+                    Your external scheduling platform script integration (e.g., Calendly, Fresha, or Square) replaces this window.
                 </p>
             </div>
         </div>
